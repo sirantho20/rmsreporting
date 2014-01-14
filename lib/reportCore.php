@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ERROR | E_PARSE);
+//error_reporting(E_ERROR | E_PARSE);
 set_time_limit(0);
 
 class reportCore 
