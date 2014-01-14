@@ -7,7 +7,7 @@ class reportCore
 public $username = 'sa';
 public $pw = 'AFtony19833';
 public $dbname = 'inala_dump';
-public $hostname = 'htg-db-01\ops';//'10.3.0.5';
+public $hostname = /*'htg-db-01\ops'*/'10.3.0.5\ops';
 private $table = 'vw_HTGRMSreportBaseview';
 private $start_date = '2013-12-01 00:00:00';
 private $end_date = '2013-12-31 23:59:59';
