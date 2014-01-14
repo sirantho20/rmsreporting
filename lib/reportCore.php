@@ -28,7 +28,7 @@ public function __construct($start_date = '', $end_date = '', $tenant = '')
     if( strtoupper(substr(PHP_OS, 0, 3)) =='LIN' )
     {
     $this->pdo = new PDO(
-            "dblib:host=htgops ; dbname=$this->dbname",
+            "dblib:host = htgops ; dbname=$this->dbname",
             "$this->username",
             "$this->pw"
             );
