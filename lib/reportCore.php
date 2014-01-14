@@ -7,7 +7,7 @@ class reportCore
 public $username = 'sa';
 public $pw = 'AFtony19833';
 public $dbname = 'inala_dump';
-public $hostname = /*'htg-db-01\ops'*/'10.3.0.5\ops';
+public $hostname = /*'htg-db-01\ops'*/'10.3.0.5';
 private $table = 'vw_HTGRMSreportBaseview';
 private $start_date = '2013-12-01 00:00:00';
 private $end_date = '2013-12-31 23:59:59';
@@ -28,7 +28,7 @@ public function __construct($start_date = '', $end_date = '', $tenant = '')
     if( strtoupper(substr(PHP_OS, 0, 3)) =='LIN' )
     {
     $this->pdo = new PDO(
-            "dblib:host=$this->hostname ; dbname=$this->dbname",
+            "dblib:host=htgops ; dbname=$this->dbname",
             "$this->username",
             "$this->pw"
             );
@@ -36,7 +36,7 @@ public function __construct($start_date = '', $end_date = '', $tenant = '')
     elseif ( strtoupper(substr(PHP_OS, 0, 3)) =='WIN' ) 
     {
         $this->pdo = new PDO(
-            "sqlsrv:server=$this->hostname ; Database=$this->dbname",
+            "sqlsrv:server=$this->hostname\ops ; Database=$this->dbname",
             "$this->username",
             "$this->pw",
             array(
