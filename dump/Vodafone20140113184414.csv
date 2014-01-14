@@ -1,0 +1,135 @@
+site_id,site_name,tenant,phase1_kwh,phase2_kwh,phase3_kwh,total_kwh
+1013,Odorkor,Vodafone,598.9,618.9,594.5,1812.3
+1014,"Nmai Dzorn",Vodafone,1202.5,0,0,1202.5
+1073,"Tema Industrial",Vodafone,1145.2,0,0,1145.2
+1090,Afienya,Vodafone,1139.2,0,0,1139.2
+1091,"America House Area",Vodafone,1604.8,0,0,1604.8
+1092,"Teshie Tsui Bleoo",Vodafone,782.2,865.2,0.1,1647.5
+1098,"Akoko Foto",Vodafone,-18672,0,0,-18672
+1099,Jamestown,Vodafone,1131.9,0,0,1131.9
+1102,"Ashiaman Market",Vodafone,1599.6,0,0,1599.6
+1114,"Taifa Burkina",Vodafone,950.2,0,0,950.2
+1115,Amrahia,Vodafone,1146.8,0,0,1146.8
+1121,"Trassaco Valley",Vodafone,832.9,0,0,832.9
+1122,Abokobi,Vodafone,502.7,0,0,502.7
+1124,Ningo,Vodafone,746.8,0,0,746.8
+1125,"Kpone ",Vodafone,1483.4,0,0,1483.4
+1128,"Ashongman Hills",Vodafone,1179.1,0,0,1179.1
+1131,"Agyen Kotoku",Vodafone,889.9,0,0,889.9
+1135,Oyarifa,Vodafone,1768.6,0,0,1768.6
+1139,Dawhenya,Vodafone,807.6,0,0,807.6
+1141,"Achimota Golf Course",Vodafone,1218.3,0,0,1218.3
+1142,"Community 3",Vodafone,1693.9,0,0,1693.9
+1145,Community12,Vodafone,1689.6,0,0,1689.6
+1147,Southablekuma,Vodafone,-5367.8,0,0,-5367.8
+1153,Okponglo,Vodafone,1298.1,0,0,1298.1
+1154,Kaneshie,Vodafone,-10450,0,0,-10450
+1155,"Comet Estates",Vodafone,1304.4,0,0,1304.4
+1160,"Nima Roundabout",Vodafone,1003.2,0,0,1003.2
+1163,Dome,Vodafone,8167.6,0,0,8167.6
+1166,"Achimota Market",Vodafone,0,0,1347.9,1347.9
+1168,"Adjei Kojo Main",Vodafone,1616.7,0,0,1616.7
+1175,"Dansoman Exhibition",Vodafone,885.7,0,0,885.7
+1177,"Gbawe Bulemin",Vodafone,1062,0,0,1062
+1180,"Nungua Brigade",Vodafone,1152.8,0,0,1152.8
+1182,"Lartebiokorshie Brigade",Vodafone,865.4,0,0,865.4
+1193,"Pokuase Hill",Vodafone,1837.7,0,0,1837.7
+1194,"Saint Anthony School",Vodafone,1301,0,0,1301
+1196,"Sapeiman ",Vodafone,661.3,0,0,661.3
+1219,Mampong,Vodafone,1300.7,0,0,1300.7
+1225,Mampongten,Vodafone,1162,0,0,1162
+1228,Juabeng,Vodafone,828.6,0,0,828.6
+1236,"Ofori Stadium",Vodafone,151.4,322.5,161.7,635.6
+1238,Konongo,Vodafone,853.3,0,0,853.3
+1249,Nsuta,Vodafone,854.6,0,0,854.6
+1250,Abofour,Vodafone,678.7,0,0,678.7
+1261,"New Edubiase",Vodafone,1566.9,0,0,1566.9
+1282,"Kumasi Poly",Vodafone,115.1,113.1,117.9,346.1
+1296,Sekyidumase,Vodafone,716.8,0,0,716.8
+1303,Kwesimintim,Vodafone,107374387.9,200.4,50979.8,107425568.1
+1320,Jukwa,Vodafone,317.2,0,0,317.2
+1344,"Assin Sibenso",Vodafone,-1708.5,0,0,-1708.5
+1346,Daboase,Vodafone,0,384,0,384
+1348,"Huni Valley",Vodafone,850.4,0,0,850.4
+1349,Inchaban,Vodafone,146.1,146.3,123,415.4
+1351,"Sefwi Bekwai",Vodafone,66.1,0,0,66.1
+1358,Bobikuma,Vodafone,448.8,0,0,448.8
+1365,Brakwa,Vodafone,47,0,0,47
+1369,Ayanfuri,Vodafone,772.8,0,0,772.8
+1372,Mpohor,Vodafone,198,0,0,198
+1377,Diaso,Vodafone,621,0,0,621
+1378,"Sefwi Asafo",Vodafone,53.7,0,0,53.7
+1381,Shama,Vodafone,52.6,0,0,52.6
+1391,"Habour (T Di)",Vodafone,646.6,674.8,681.3,2002.7
+1392,Bawdie,Vodafone,365,365,318.2,1048.2
+1404,Suhum,Vodafone,644.7,0,0,644.7
+1405,Akosombo,Vodafone,502.7,353.8,176.4,1032.9
+1409,Osino,Vodafone,329.3,0,0,329.3
+1413,Anyinam,Vodafone,149.4,0,72.799999999999,222.2
+1414,Asafo,Vodafone,913.7,0,0,913.7
+1423,Okorase,Vodafone,1197.9,0,0,1197.9
+1432,"Koforidua Gallaway",Vodafone,1146.4,0,0,1146.4
+1434,"Koforidua Newtown",Vodafone,1709.2,0,0,1709.2
+1435,"Suhum Ayekotse",Vodafone,537.7,0,0,537.7
+1438,Adweso,Vodafone,1083.2,0,0,1083.2
+1448,"Kwahu Asakraka",Vodafone,0,0,751.8,751.8
+1455,Tease,Vodafone,696.4,0,0,696.4
+1459,"Ekye Amanfrom",Vodafone,840.3,0,0,840.3
+1504,"Wa New",Vodafone,521.3,530.4,478.3,1530
+1516,Walewale,Vodafone,0,0,0,0
+1534,Gambaga,Vodafone,726.2,0,0,726.2
+1543,"Bolga Township",Vodafone,1659.1,0,0,1659.1
+1556,"Bolgatanga Zaare",Vodafone,833.4,20.9,786.1,1640.4
+1566,Fellimong,Vodafone,149.2,156.6,86.4,392.2
+1582,Bulenga,Vodafone,0,247.8,457.9,705.7
+1591,"Nalerigu 1",Vodafone,1341,0,0,1341
+1593,Bassisan,Vodafone,661.8,0,0,661.8
+1594,"Tishigu (Tamale Town Center)",Vodafone,-1883.9,-3089.4,-2919.7,-7893
+1599,"Dobile (Wa Ii)",Vodafone,1579,0,0,1579
+1616,Abutia,Vodafone,891.8,0,0,891.8
+1620,"Dabala Junction",Vodafone,652.2,0,0,652.2
+1643,Peki,Vodafone,385.3,0,0,385.3
+1652,Abor,Vodafone,943,0,0,943
+1713,Abia-Domenase,Vodafone,654.2,0,0,654.2
+1714,Abura,Vodafone,1140.1,0,0,1140.1
+1715,"Adum Banso",Vodafone,0,0,0,0
+1726,Bedum,Vodafone,1134.6,0,0,1134.6
+1730,Effaso,Vodafone,259.4,261.7,240.2,761.3
+1733,"Jeway Wharf",Vodafone,15.5,15.4,12,42.9
+1734,"Juabesu Nkwanta",Vodafone,207.6,214.8,0,422.4
+1736,Nsawura,Vodafone,638.2,0,0,638.2
+1737,"Adiembra Ii (Fijai West)",Vodafone,1598.6,0,0,1598.6
+1746,"Wassa Akropong",Vodafone,-11531.1,0,0,-11531.1
+1747,"Tanokrom East",Vodafone,0.3,0,890.4,890.7
+1754,"Topp/Kwanyaako ",Vodafone,901.1,0,0,901.1
+1755,Odobeng,Vodafone,0,0,932.4,932.4
+1760,Essuehyia,Vodafone,478.8,0,0,478.8
+1761,"Benso (Wassa Agyakaa Manso)",Vodafone,395.1,406.3,346.2,1147.6
+1800,Denkyemuoso,Vodafone,1302.1,0,0,1302.1
+1801,"Santase Roundabout",Vodafone,1594.6,0,0,1594.6
+1811,"Tutuka Aboagyekrom",Vodafone,156.7,0,0,156.7
+1820,Dadieso,Vodafone,7423,0,0,7423
+1846,"Roman Hill",Vodafone,1509,0,0,1509
+1849,Apatrapa,Vodafone,1047.4,0,0,1047.4
+1856,"Asafo Market",Vodafone,0,0,0,0
+1858,"Bogobiri(Govhill Ii)",Vodafone,571.2,0,0,571.2
+1859,"Manso Adubia",Vodafone,850.8,0,0,850.8
+1865,Jachie,Vodafone,657.8,0,0,657.8
+1869,Boanim,Vodafone,779.7,0,0,779.7
+1871,Kotwi,Vodafone,902.3,0,0,902.3
+1899,Nkasiem,Vodafone,557.9,0,0,557.9
+1901,"Teshie Aboma",Vodafone,388.4,306.7,302.9,998
+1905,Kokomlemle,Vodafone,691.9,751.6,0,1443.5
+1910,Chantan,Vodafone,69.5,0,0,69.5
+1917,Nyigbenya,Vodafone,969.7,0,0,969.7
+1919,Gimpa,Vodafone,0,0,1052,1052
+1921,"Abensu (Pokuase)",Vodafone,819.8,0,0,819.8
+1924,"Adenta East",Vodafone,513,522.2,515.3,1550.5
+1941,"Nungua Adorgon",Vodafone,996.5,0,0,996.5
+1944,"Russia Ii",Vodafone,-13980,0,0,-13980
+1956,"Anyaa  Nic Down",Vodafone,503.5,0,0,503.5
+3202,Yamfo,Vodafone,406.5,0,0,406.5
+3203,Nkrankwanta,Vodafone,852.9,0,0,852.9
+3220,"Ashtown Ii/ Ashtown Ahenboboan",Vodafone,568,566.7,536.4,1671.1
+3280,"Workers College(B/N Adum And Abo",Vodafone,1556.4,0,0,1556.4
+3504,"Waii/ Kabanye",Vodafone,436.5,431.4,387,1254.9
