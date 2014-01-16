@@ -6,9 +6,8 @@ set_time_limit(0);
  * and open the template in the editor.
  */
 
-include 'lib/ad/SimpleLDAP.class.php';
+include ('lib/reportCore.php');
 
-
-$ldap = new SimpleLDAP('10.3.0.1', 389);
-$ldap->dn = 'ou=users,dc=hta,dc=local';
-print_r($ldap->auth('hta\aafetsrom', '!!AFtony19833'));
+$obj = new reportCore('2013-12-01','2013-12-31');
+$obj->migrateData();
+//print_r($obj->getUniqueSites());

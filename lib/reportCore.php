@@ -55,6 +55,115 @@ public function __construct($start_date = '', $end_date = '', $tenant = '')
     
 }
 
+public function migrateData()
+{
+    $tbl_dll = "CREATE TABLE if not exists $this->table (
+       SAMUnitName text
+      ,SAMLocation text
+      ,EMUUnitName text
+      ,ReadingDate numeric
+      ,Location1 text
+      ,Location2 text
+      ,Location3 text
+      ,Location4 text
+      ,Location5 text
+      ,KWH1 numeric
+      ,KWH2 numeric
+      ,KWH3 numeric
+      ,KWH4 numeric
+      ,KWH5 numeric
+      ,KWH6 numeric
+      ,Location6 text
+      ,CT1Conf numeric
+      ,CT2Conf numeric
+      ,CT3Conf numeric
+      ,CT4Conf numeric
+      ,CT5Conf numeric
+      ,CT6Conf numeric
+      ,ServiceStateText text)";
+    
+    $sqlite = new PDO("sqlite:objects/db.sq3", "", "", array(PDO::ATTR_PERSISTENT => TRUE));
+    $sqlite->exec("drop table if exists $this->table");
+    $sqlite->exec($tbl_dll);
+    
+    //get sql data
+    $qr = "select * from $this->table where ".$this->queryConstraints();
+    $data = $this->getData($qr);
+    $first = $data[0];
+    $fields = array_keys($first);
+    
+    $fh = @fopen('dump/tmp.csv', 'w');
+    @fputcsv($fh, $fields);
+    foreach ( $data as $record)
+    {
+        @fputcsv($fh, $record);
+    }
+    
+    fclose($fh);
+    
+    $this->import_csv_to_sqlite($sqlite, 'dump/tmp.csv', array('table'=>$this->table));
+    
+}
+
+public function import_csv_to_sqlite(&$pdo, $csv_path, $options = array())
+{
+	$delimiter = @$options['delimiter'];
+        $table = @$options['table'];
+        $fields = @$options['fields'];
+	
+	if (($csv_handle = fopen($csv_path, "r")) === FALSE)
+        {
+		throw new Exception('Cannot open CSV file');
+        }
+		
+	if(!isset($delimiter))
+        {
+		$delimiter = ',';
+        }
+		
+	if(!isset($table))
+        {
+		$table = preg_replace("/[^A-Z0-9]/i", '', basename($csv_path));
+        }
+	
+	if(!isset($fields)){
+		$fields = array_map(function ($field){
+			return strtolower(preg_replace("/[^A-Z0-9]/i", '', $field));
+		}, fgetcsv($csv_handle, 0, $delimiter));
+	}
+	
+	$create_fields_str = join(', ', array_map(function ($field){
+		return "$field TEXT NULL";
+	}, $fields));
+	
+	$pdo->beginTransaction();
+	
+	$create_table_sql = "CREATE TABLE IF NOT EXISTS $table ($create_fields_str)";
+	$pdo->exec($create_table_sql);
+ 
+	$insert_fields_str = join(', ', $fields);
+	$insert_values_str = join(', ', array_fill(0, count($fields),  '?'));
+	$insert_sql = "INSERT INTO $table ($insert_fields_str) VALUES ($insert_values_str)";
+	$insert_sth = $pdo->prepare($insert_sql);
+	
+	$inserted_rows = 0;
+	while (($data = fgetcsv($csv_handle, 0, $delimiter)) !== FALSE) {
+		$insert_sth->execute($data);
+		$inserted_rows++;
+	}
+	
+	$pdo->commit();
+	
+	fclose($csv_handle);
+	
+	return array(
+			'table' => $table,
+			'fields' => $fields,
+			'insert' => $insert_sth,
+			'inserted_rows' => $inserted_rows
+		);
+ 
+}
 public function createViewObject()
 {
     $qr = file_get_contents('objects/baseview.sql');
@@ -64,6 +173,7 @@ public function createViewObject()
 
 public function getData($qr)
 {
+    ini_set('memory_limit', '500M');
     
     $qr = $this->pdo->prepare( $qr);
     //die($qr->queryString);
