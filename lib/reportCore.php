@@ -8,16 +8,25 @@ public $username = 'sa';
 public $pw = 'AFtony19833';
 public $dbname = 'inala_dump';
 public $hostname = /*'htg-db-01\ops'*/'10.3.0.5';
-private $table = 'vw_HTGRMSreportBaseview';
+public $table = 'vw_HTGRMSreportBaseview';
 private $start_date = '2013-12-01 00:00:00';
 private $end_date = '2013-12-31 23:59:59';
 private $tenant = 'Vodafone';
-private $pdo;
+public $pdo;
 private $output_file_name = 'dump/';
 private $data_headers = array();
 
-public function __construct($start_date = '', $end_date = '', $tenant = '') 
+public function __construct($start_date = '', $end_date = '', $tenant = '', $options = '') 
 {
+    if(is_array($options))
+    {
+        extract($options);
+        if(isset($dbname))
+        {
+            $this->dbname = $dbname;
+        }
+    }
+
     $this->start_date = $start_date.' 00:00:00';
     $this->end_date = $end_date.' 23:59:59';
     $this->tenant = $tenant;
