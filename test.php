@@ -1,5 +1,5 @@
 <?php
-require '/vendor/autoload.php';
+require 'vendor/autoload.php';
 
 
 $msg = Swift_Message::newInstance();
