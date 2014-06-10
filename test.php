@@ -1,6 +1,8 @@
 <?php
 require 'vendor/autoload.php';
 
+echo 'you will receive soon';
+fastcgi_finish_request();
 
 $msg = Swift_Message::newInstance();
     $msg->setSubject('Power report-')

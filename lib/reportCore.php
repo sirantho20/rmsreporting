@@ -346,7 +346,7 @@ public function dumpCSV()
         @fputcsv($fh, $record);
     }
     fclose($fh);
-    
+    fastcgi_finish_request();
     $this->downloadCSV($fh);
     $msg = Swift_Message::newInstance();
     $msg->setSubject('Power report-'.$this->tenant)
