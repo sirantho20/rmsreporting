@@ -346,8 +346,8 @@ public function dumpCSV()
         @fputcsv($fh, $record);
     }
     fclose($fh);
-    fastcgi_finish_request();
-    $this->downloadCSV($fh);
+    
+    
     $msg = Swift_Message::newInstance();
     $msg->setSubject('Power report-'.$this->tenant)
             ->setFrom('sirantho20@gmail.com')
@@ -361,7 +361,7 @@ public function dumpCSV()
     $mail = new Swift_Mailer($transport);
     $mail->send($msg);
     
-    
+    $this->downloadCSV($fh);
 }
 
 public function downloadCSV($content)
