@@ -348,13 +348,13 @@ public function dumpCSV()
     $this->downloadCSV($fh);
     $msg = Swift_Message::newInstance();
     $msg->setSubject('Power report-'.$this->tenant)
-            ->setFrom('aafetsrom@htghana.com')
+            ->setFrom('sirantho20@gmail.com')
             ->setTo('aafetsrom@htghana.com')
             ->setBody('Please find attached your requested report')
             ->attach(Swift_Attachment::fromPath($this->output_file_name));
-    $transport = Swift_SmtpTransport::newInstance('mail.htghana.com', '25');
-    $transport->setUsername('aafetsrom@htghana.com')
-            ->setPassword('!!AFtony19833');
+    $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl");
+    $transport->setUsername('sirantho20@gmail.com')
+            ->setPassword('afTONY19833');
     
     $mail = new Swift_Mailer($transport);
     $mail->send($msg);
