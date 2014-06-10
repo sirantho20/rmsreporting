@@ -7,7 +7,7 @@ $msg = Swift_Message::newInstance();
             ->setFrom('aafetsrom@htghana.com')
             ->setTo('aafetsrom@htghana.com')
             ->setBody('Please find attached your requested report');
-    $transport = Swift_SmtpTransport::newInstance('mail.htghana.com', '25');
+    $transport = Swift_SmtpTransport::newInstance('10.3.0.30', '25');
     $transport->setUsername('aafetsrom@htghana.com')
             ->setPassword('!!AFtony19833');
     
