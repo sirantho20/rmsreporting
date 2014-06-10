@@ -345,6 +345,8 @@ public function dumpCSV()
     {
         @fputcsv($fh, $record);
     }
+    fclose($fh);
+    
     $this->downloadCSV($fh);
     $msg = Swift_Message::newInstance();
     $msg->setSubject('Power report-'.$this->tenant)
@@ -359,7 +361,7 @@ public function dumpCSV()
     $mail = new Swift_Mailer($transport);
     $mail->send($msg);
     
-    fclose($fh);
+    
 }
 
 public function downloadCSV($content)
