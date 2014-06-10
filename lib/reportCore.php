@@ -4,9 +4,9 @@ set_time_limit(0);
 
 class reportCore 
 {
-public $username = 'sa';
-public $pw = 'AFtony19833';
-public $dbname = 'inala_dump';
+public $username = 'samems_gh_helios';
+public $pw = 'sam1029';
+public $dbname = 'sam_ems_gh_helios';
 public $hostname = /*'htg-db-01\ops'*/'10.3.0.5';
 public $table = 'vw_HTGRMSreportBaseview';
 private $start_date = '2013-12-01 00:00:00';

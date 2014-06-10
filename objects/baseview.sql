@@ -1,4 +1,5 @@
 if not exists (select * from sysobjects where name='vw_HTGRMSreportBaseview' and xtype='V')
+    use inala_dump;
     create view vw_HTGRMSreportBaseview as 
           SELECT
              SAMUnits.SAMUnitName,
@@ -24,12 +25,12 @@ if not exists (select * from sysobjects where name='vw_HTGRMSreportBaseview' and
              EMUValues.CT5Conf,
              EMUValues.CT6Conf,
              ServiceStates.ServiceStateText
-        FROM ((inala_dump.dbo.SAMUnits SAMUnits
-               INNER JOIN inala_dump.dbo.ServiceStates ServiceStates
+        FROM ((dbo.SAMUnits SAMUnits
+               INNER JOIN dbo.ServiceStates ServiceStates
                   ON (SAMUnits.ServiceState = ServiceStates.ServiceStateID))
-              INNER JOIN inala_dump.dbo.EMUUnits EMUUnits
+              INNER JOIN dbo.EMUUnits EMUUnits
                  ON (SAMUnits.SAMID = EMUUnits.SAMID))
-             INNER JOIN inala_dump.dbo.EMUValues EMUValues
+             INNER JOIN dbo.EMUValues EMUValues
                 ON (EMUUnits.EMUID = EMUValues.EMUID)
        WHERE     (EMUUnits.EMUUnitName IN ('EMU 1', 'EMU 2'))
              AND (ServiceStates.ServiceStateText = 'HTG NOC')
