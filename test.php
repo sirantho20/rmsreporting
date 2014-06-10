@@ -7,7 +7,7 @@ $msg = Swift_Message::newInstance();
             ->setFrom('sirantho20@gmail.com')
             ->setTo('aafetsrom@htghana.com')
             ->setBody('Please find attached your requested report');
-    $transport = Swift_SmtpTransport::newInstance('mail.google.com', '25');
+    $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl");
     $transport->setUsername('sirantho20@gmail.com')
             ->setPassword('afTONY19833');
     
