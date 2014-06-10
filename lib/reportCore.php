@@ -7,7 +7,7 @@ class reportCore
 public $username = 'samems_gh_helios';
 public $pw = 'sam1029';
 public $dbname = 'sam_ems_gh_helios';
-public $hostname = /*'htg-db-01\ops'*/'10.3.0.5';
+public $hostname = /*'htg-db-01\ops'*/'10.3.0.11';
 public $table = 'vw_HTGRMSreportBaseview';
 private $start_date = '2013-12-01 00:00:00';
 private $end_date = '2013-12-31 23:59:59';
