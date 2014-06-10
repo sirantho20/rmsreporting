@@ -1,6 +1,8 @@
 <?php
+require '/vendor/autoload.php';
 //error_reporting(E_ERROR | E_PARSE);
 set_time_limit(0);
+session_start();
 
 class reportCore 
 {
@@ -31,7 +33,7 @@ public function __construct($start_date = '', $end_date = '', $tenant = '', $opt
     $this->end_date = $end_date.' 23:59:59';
     $this->tenant = $tenant;
     
-    $this->output_file_name = 'dump/'.$this->tenant.date('YmdHis').'.csv';
+    $this->output_file_name = 'dump/'.$_SESSION['user'].'_'.$this->tenant.'_'.date('YmdHis').'.csv';
     
     //create pdo connection based on os
     if( strtoupper(substr(PHP_OS, 0, 3)) =='LIN' )
@@ -344,6 +346,19 @@ public function dumpCSV()
         @fputcsv($fh, $record);
     }
     $this->downloadCSV($fh);
+    $msg = Swift_Message::newInstance();
+    $msg->setSubject('Power report-'.$this->tenant)
+            ->setFrom('aafetsrom@htghana.com')
+            ->setTo('aafetsrom@htghana.com')
+            ->setBody('Please find attached your requested report')
+            ->attach(Swift_Attachment::fromPath($this->output_file_name));
+    $transport = Swift_SmtpTransport::newInstance('mail.htghana.com', '25');
+    $transport->setUsername('aafetsrom@htghana.com')
+            ->setPassword('!!AFtony19833');
+    
+    $mail = new Swift_Mailer($transport);
+    $mail->send($msg);
+    
     fclose($fh);
 }
 
@@ -359,7 +374,7 @@ public function downloadCSV($content)
     header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
     ob_clean();
     flush();
-    
+    //echo $content;
     readfile($fileName);
     
     //unlink($fileName);
