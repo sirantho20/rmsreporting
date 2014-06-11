@@ -345,23 +345,24 @@ public function dumpCSV()
     {
         @fputcsv($fh, $record);
     }
+    $this->downloadCSV($fh);
     fclose($fh);
     
+//    
+//    $msg = Swift_Message::newInstance();
+//    $msg->setSubject('Power report-'.$this->tenant)
+//            ->setFrom('sirantho20@gmail.com')
+//            ->setTo('aafetsrom@htghana.com')
+//            ->setBody('Please find attached your requested report')
+//            ->attach(Swift_Attachment::fromPath($this->output_file_name));
+//    $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl");
+//    $transport->setUsername('sirantho20@gmail.com')
+//            ->setPassword('afTONY19833');
+//    
+//    $mail = new Swift_Mailer($transport);
+//    $mail->send($msg);
     
-    $msg = Swift_Message::newInstance();
-    $msg->setSubject('Power report-'.$this->tenant)
-            ->setFrom('sirantho20@gmail.com')
-            ->setTo('aafetsrom@htghana.com')
-            ->setBody('Please find attached your requested report')
-            ->attach(Swift_Attachment::fromPath($this->output_file_name));
-    $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl");
-    $transport->setUsername('sirantho20@gmail.com')
-            ->setPassword('afTONY19833');
     
-    $mail = new Swift_Mailer($transport);
-    $mail->send($msg);
-    
-    $this->downloadCSV($fh);
 }
 
 public function downloadCSV($content)
@@ -376,7 +377,7 @@ public function downloadCSV($content)
     header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
     ob_clean();
     flush();
-    //echo $content;
+    echo $content;
     readfile($fileName);
     
     //unlink($fileName);
